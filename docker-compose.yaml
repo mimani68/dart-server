@@ -5,10 +5,11 @@ services:
   app:
     image: ubuntu:18.04
     environment: 
-      PORT: 3000
+      PORT: 3001
     working_dir: /app
     volumes:
       - ./dist:/app
     ports:
-      - "3000:3000"
+      - "3001:3001"
     command: /app/server
+    
