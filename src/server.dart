@@ -15,9 +15,9 @@ void main() async {
 
   Map<String, String> envVars = Platform.environment;
   final port = int.parse(Platform.environment['PORT'] ?? '3000');
-  // print(int.parse(envVars['PORT']));
+  final host = Platform.environment['HOST'] ?? '0.0.0.0';
 
-  var server = await shelf_io.serve(handler, 'localhost', port);
+  var server = await shelf_io.serve(handler, host, port);
 
   // Enable content compression
   server.autoCompress = true;
