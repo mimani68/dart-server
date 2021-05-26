@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+
+  app:
+    image: ubuntu:18.04
+    environment: 
+      PORT: 3000
+    working_dir: /app
+    volumes:
+      - ./dist:/app
+    ports:
+      - "3000:3000"
+    command: /app/server
