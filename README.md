@@ -1,4 +1,4 @@
-# How develop dart app in Docker ecosystem
+# Develop dart server in Docker ecosystem
 
 ```bash
 alias dt="docker run -d --name dart-runtime -it -w /app -v ${PWD}:/app google/dart:2.13.1"
